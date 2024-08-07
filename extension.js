@@ -65,7 +65,8 @@ class MediaQueryManagerProvider {
         const startLine = activeTab.document.positionAt(start).line + 1; // Get the line number (1-based)
     
         // Remove '@media screen and' from the label
-        const label = mediaQueryContent.split('{')[0].trim().replace('@media screen and', '').trim();
+        let label = mediaQueryContent.split('{')[0].trim().replace('@media screen and', '').trim();
+        label = label.split('{')[0].trim().replace('@media only screen and', '').trim();
     
         const treeItem = new vscode.TreeItem(
           `${label} (Line ${startLine})`,
