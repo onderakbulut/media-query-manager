@@ -45,7 +45,12 @@
     "views": {
       "mediaQueryManager": [
         {
+          "type": "webview",
           "id": "mediaQueryManagerView",
+          "name": "Search Bar"
+        },
+        {
+          "id": "mediaQueryManagerTree",
           "name": "Media Queries"
         }
       ]
